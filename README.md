@@ -78,4 +78,40 @@ That's it! 🎉
 - `make install` - Install/update dependencies only
 - `make run` - Run the application
 - `make clean` - Remove virtual environment and cache files
+
+## Managing Dependencies Across Devices
+
+When you install a new package on one device:
+
+**Device 1 (adding new dependency):**
+```bash
+# Activate virtual environment
+source venv/bin/activate
+
+# Install new package
+pip install package-name
+
+# Add it to pyproject.toml dependencies section manually, or
+pip freeze > requirements.txt  # Optional: export all packages
+
+# Commit and push changes
+git add pyproject.toml
+git commit -m "Add package-name dependency"
+git push
+```
+
+**Device 2 (getting new dependency):**
+```bash
+# Pull latest changes
+git pull
+
+# Update dependencies
+make install
+
+# Or manually:
+source venv/bin/activate
+pip install -e .
+```
+
+The dependencies are managed in `pyproject.toml`, so all devices will sync automatically when you run `make install` after pulling.
 # langchain-world
