@@ -9,3 +9,25 @@ wheels/
 # Virtual environments
 .venv
 venv/
+
+# Environment variables
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Python version managers
+.python-version
+
+# Package managers
+uv.lock
+poetry.lock
+
+# OS
+.DS_Store
+Thumbs.db
