@@ -34,6 +34,30 @@ python main.py
 - Ollama installed with `phi4-mini:3.8b` model
 - Make (optional, but recommended)
 
+### Installing Make
+
+**macOS:**
+```bash
+xcode-select --install
+```
+
+**Linux (Ubuntu/Debian):**
+```bash
+sudo apt-get update
+sudo apt-get install build-essential
+```
+
+**Linux (Fedora/RHEL):**
+```bash
+sudo dnf install make
+```
+
+**Windows:**
+```bash
+choco install make
+# Or use WSL (Windows Subsystem for Linux)
+```
+
 ## Usage on New Device
 
 1. Clone the repository:
